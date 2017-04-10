@@ -70,8 +70,8 @@ public class CoolWeatherDB {
             do {
                 Province province = new Province();
                 province.setId(cursor.getInt(cursor.getColumnIndex("id")));
-                province.setProviceName(cursor.getString(cursor.getColumnIndex("province_name")));
-                province.setProviceCode(cursor.getString(cursor.getColumnIndex("province_code")));
+                province.setProvinceName(cursor.getString(cursor.getColumnIndex("province_name")));
+                province.setProvinceCode(cursor.getString(cursor.getColumnIndex("province_code")));
                 list.add(province);
             }while (cursor.moveToNext());
         }
@@ -86,8 +86,8 @@ public class CoolWeatherDB {
     public void saveCity(City city){
         if (city != null){
             ContentValues values =new ContentValues();
-            values.put("city_name",city.getcityName());
-            values.put("city_code",city.getcityCode());
+            values.put("city_name",city.getCityName());
+            values.put("city_code",city.getCityCode());
             values.put("province_id",city.getProvinceId());
             db.insert("City",null,values);
         }
@@ -103,8 +103,8 @@ public class CoolWeatherDB {
             do {
                 City city = new City();
                 city.setId(cursor.getInt(cursor.getColumnIndex("id")));
-                city.setcityName(cursor.getString(cursor.getColumnIndex("city_name")));
-                city.setcityCode(cursor.getString(cursor.getColumnIndex("city_code")));
+                city.setCityName(cursor.getString(cursor.getColumnIndex("city_name")));
+                city.setCityCode(cursor.getString(cursor.getColumnIndex("city_code")));
                 city.setProvinceId(provinceId);
             }while (cursor.moveToNext());
         }
@@ -116,7 +116,7 @@ public class CoolWeatherDB {
     /**
      *将Couty实例存储到数据库
      */
-    public void saveCouty(County county){
+    public void saveCounty(County county){
         if (county != null){
             ContentValues values = new ContentValues();
             values.put("county_name",county.getCountyName());
@@ -148,6 +148,7 @@ public class CoolWeatherDB {
         }
         return list;
     }
- 
+
 
 }
+

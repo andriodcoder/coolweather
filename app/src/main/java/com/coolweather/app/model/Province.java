@@ -18,13 +18,13 @@ public class Province {
     public String getProvinceName(){
         return provinceName;
     }
-    public void setProviceName(String provinceName){
+    public void setProvinceName(String provinceName){
         this.provinceName=provinceName;
     }
     public String getProvinceCode(){
         return provinceCode;
     }
-    public void setProviceCode(String provinceCode){
+    public void setProvinceCode(String provinceCode){
         this.provinceCode=provinceCode;
     }
 

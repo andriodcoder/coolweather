@@ -15,16 +15,16 @@ public class City {
     public void setId(int id){
         this.id=id;
     }
-    public String getcityName(){
+    public String getCityName(){
         return cityName;
     }
-    public void setcityName(String cityName){
+    public void setCityName(String cityName){
         this.cityName=cityName;
     }
-    public String getcityCode(){
+    public String getCityCode(){
         return cityCode;
     }
-    public void setcityCode(String cityCode){
+    public void setCityCode(String cityCode){
         this.cityCode=cityCode;
     }
     public int getProvinceId(){
